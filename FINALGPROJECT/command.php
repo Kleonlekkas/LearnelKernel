@@ -1,5 +1,5 @@
 <?php
-$page = "Commands";
+$page = "Terminal";
 include 'assets/inc/header.php';
 ?>
 <body>
