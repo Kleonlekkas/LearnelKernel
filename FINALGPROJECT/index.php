@@ -1,6 +1,7 @@
 <?php
 $page = "Home";
 include 'assets/inc/header.php';
+session_start();
 ?>
 <body>
         <img class = "toppic1" src = "assets/img/learn_horz.png" alt="Learnel Kernel logo">

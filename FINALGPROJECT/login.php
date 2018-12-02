@@ -3,7 +3,7 @@
     include 'assets/inc/header.php';
     $path = './';
     session_start();
-    session_name("Jam");
+    session_name("Learnel");
     $_SESSION['TEST'] = "Hello RIT person";
 
     if(!empty($_POST['uname']) && !empty($_POST['pass'])) { // if the fields are not empty
@@ -21,7 +21,7 @@
         if(password_verify($_POST['pass'], $res)) {
             $_SESSION['login'] = true;
             $_SESSION['name'] = $_POST['uname'];
-            header('Location: page.php'); // take us home, country road ... if the uname and pass combo works
+            header('Location: profile.php'); // take us home, country road ... if the uname and pass combo works
         } else {
             echo 'The username or password you have entered is invalid'; // if the password is a mismatch
         }
@@ -33,7 +33,15 @@
 <body>
     <img class = "toppic" src = "assets/img/profile.png" alt="Learnel Kernel Profile">
     <div class = "content">
-        qwertyuiopasdfghjklzxcvbnm qwertyuiopasdfghjklzxcvbnm qwertyuiopasdfghjklzxcvbnm qwertyuiopasdfghjklzxcvbnm, qwertyuiosdfghjklzxcvbnm
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+        <p>User Name:</p>
+        <input type="text" name="uname" id="uname" /><br />
+        
+        Password:
+        <input type="password" name="pass" id="pass" /><br />
+        
+        <input type="submit" value="Submit form" /><input type="reset" value="Reset form" /><br />
+        <input type="button" value ="Register" onclick="window.location='register.php'" />
     </div>
 </body>
 <?php
