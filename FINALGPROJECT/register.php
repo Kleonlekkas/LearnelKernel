@@ -1,4 +1,6 @@
 <?php
+    $page = "Register";
+    include 'assets/inc/header.php';
     $path = "./";
     
     // makes password a variable to be stored, otherwise the variable cannot be passed to DB without a reference error 
@@ -33,15 +35,9 @@
 
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf8" />
-    <title>Register</title>   
-</head>
 <body>
-    
+    <img class = "toppic" src = "assets/img/profile.png" alt="Learnel Kernel Profile">
+    <div class = "content">
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <p>User Name:</p>
         <input type="text" name="uname" id="uname" /><br />
@@ -54,10 +50,8 @@
         
         <input type="submit" value="Submit form" /><input type="reset" value="Reset form" />
         <input type="button" value ="Login" onclick="window.location='login.php'" />
-        
-    </form>
-    
-    
-    
 </body>
-</html>
+
+<?php
+include 'assets/inc/footer.php';
+?>
