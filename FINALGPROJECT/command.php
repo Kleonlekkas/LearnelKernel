@@ -1,13 +1,15 @@
 <?php
-$page = "Poem";
+$page = "Terminal";
 include 'assets/inc/header.php';
 ?>
 <body>
-    <img class = "toppic" src = "assets/img/alma_mater.png" alt="Learnel Kernel Poem">
+    <img class = "toppic" src = "assets/img/terminal.png" alt="Learnel Kernel command">
     <div class = "content">
         qwertyuiopasdfghjklzxcvbnm qwertyuiopasdfghjklzxcvbnm qwertyuiopasdfghjklzxcvbnm qwertyuiopasdfghjklzxcvbnm, qwertyuiosdfghjklzxcvbnm
     </div>
 </body>
+
 <?php
 include 'assets/inc/footer.php';
 ?>
+

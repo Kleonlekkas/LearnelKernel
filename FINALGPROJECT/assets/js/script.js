@@ -15,7 +15,7 @@ function menuHider() {
       el.src = img;
   }
 //
-// End JS for Nav Bar
+// Begin JS for Nav Bar
 //
   
   

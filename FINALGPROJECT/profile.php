@@ -3,6 +3,11 @@ $page = "Profile";
 include 'assets/inc/header.php';
 ?>
 <body>
-
+    <img class = "toppic" src = "assets/img/profile.png" alt="Learnel Kernel Profile">
+    <div class = "content">
+        qwertyuiopasdfghjklzxcvbnm qwertyuiopasdfghjklzxcvbnm qwertyuiopasdfghjklzxcvbnm qwertyuiopasdfghjklzxcvbnm, qwertyuiosdfghjklzxcvbnm
+    </div>
 </body>
-</html>
+<?php
+include 'assets/inc/footer.php';
+?>

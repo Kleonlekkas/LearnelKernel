@@ -9,83 +9,172 @@ font-family: 'Roboto Slab', serif;
 
 */
 
-body {
-    margin: 0;
-    background-color: #fff;
-  }
-  
-  .topnav > a {
+.topnav > a {
     text-decoration: none;
     text-decoration-color: initial;
-    color: #F4FFFD;
-  }
-  
-  .menuHolder {
+    color: #F8F9F9; /* gray background */
+}
+
+.menuHolder {
     height: 80px;
     width: 100%;
-    background-color: #4BAAE5; /* Blue 900 */
+    background-color: #F8F9F9; /* gray background */
     padding: 0px;
     margin: 0px;
     list-style-type: none;
     overflow: hidden;
-  }
-  
-  .topnav {
+}
+
+.topnav {
     overflow: hidden;
-    background-color: #4BAAE5; /* Blue 900 */
+    background-color: #F8F9F9; /* gray background */
     position: relative;
     top:0;
     z-index: 999;
-  }
-  
-  .topnav > a {
+}
+
+.topnav > a {
     float: left;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
     display: block;
-    color: #fff;
+    color: #427FE5; /* Blue 900 */
     text-align: center;
     padding: 14px 30px;
     text-decoration: none;
-  }
-  
-  .topnav a:hover {
-      color: #000;
-  }
-  
-  .active {
+}
+
+.topnav a:hover {
+	color: #000;
+}
+
+.active {
     color: #000 !important;
-  }
-  
-  .topnav .icon {
+}
+
+.topnav .icon {
     display: none;
-  }
-  
-  .logo {
-      display: block;
+}
+
+.logo {
+    display: block;
     height: auto;
     width: 25px;
+}
+
+@media screen and (max-width: 910px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
   }
-  
-  @media screen and (max-width: 910px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-    .topnav.responsive .icon {
-      position: absolute;
-      right: 0px;
-      top: 0px;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0px;
+    top: 0px;
   }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
 
 /*
 CSS For Nav Bar Ends
 */
-  
+
+/*
+CSS For Footer Begins
+*/
+
+.foot {
+    color: #427FE5;
+    margin-top: 1em;
+    background-color: #F8F9F9;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 5em;
+}
+
+.foot li {
+    font-family: 'Roboto', sans-serif;
+    font-size: .7em;
+    list-style-type:none;
+    
+}
+
+.foot a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 910px) {
+    .foot {
+        margin-top: .5em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        padding-left: 1em;
+    }
+  }
+
+/*
+CSS For Footer Ends
+*/
+
+/*
+CSS for the body begins
+*/
+
+html {
+    height: 100%;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #fff; /* white background */
+}
+
+.content{
+    margin: auto;
+    width: 60%;
+    border: 2px solid #F8F9F9;
+    text-align: center;
+    padding: 2em;
+    background-color: #F8F9F9;
+    border-radius: 10px;
+}  
+
+.toppic{
+    margin: auto;
+    width: 25%;
+    height: 40%;
+    background-color: #fff;
+    
+} 
+
+.toppic1{
+    margin: auto;
+    width: 60%;
+    padding: 2em;
+    background-color: #fff;
+    
+}  
+
+@media screen and (max-width: 910px) {
+    .content{
+        margin: auto;
+        width: 75%;
+        border: 2px solid #F8F9F9;
+        text-align: center;
+        padding: 2em;
+        background-color: #F8F9F9;
+        border-radius: 10px;
+    }  
+  }
+/*
+CSS for the body ends
+*/
