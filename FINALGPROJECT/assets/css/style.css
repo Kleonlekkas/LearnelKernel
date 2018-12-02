@@ -331,3 +331,16 @@ CSS for Exercises begins
 /*
 CSS for Exercises ends
 */
+
+
+/*
+CSS for Alma Mater begins
+*/
+
+.sec1, .sec2, .sec3, .sec4, .sec5, .sec6 {
+    visibility: visible;
+}
+
+/*
+CSS for Alma Mater ends
+*/
