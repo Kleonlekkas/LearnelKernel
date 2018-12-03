@@ -19,7 +19,7 @@
         $stmt->execute();
         $stmt->close();
         
-        header('Location: index.php');
+        header('Location: login.php');
     } // end of if (!empty...)
     
 
@@ -35,8 +35,7 @@
 
 ?>
 
-<body>
-    <img class = "toppic" src = "assets/img/profile.png" alt="Learnel Kernel Profile">
+<img class = "toppic" src = "assets/img/profile.png" alt="Learnel Kernel Profile">
     <div class = "content">
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <p>User Name:</p>
@@ -48,8 +47,9 @@
         <p>Password (again):</p>
         <input type="password" name="pass2" id="pass2" /><br />
         
-        <input type="submit" value="Submit form" /><input type="reset" value="Reset form" />
-        <input type="button" value ="Login" onclick="window.location='login.php'" />
+        <input type="submit" value="Create Account" /><input type="reset" value="Reset" />
+        </form>
+    </div>
 </body>
 
 <?php

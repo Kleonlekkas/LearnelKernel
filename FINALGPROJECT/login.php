@@ -6,6 +6,10 @@
     session_name("Learnel");
     $_SESSION['TEST'] = "Hello RIT person";
 
+    if(!empty($_SESSION['name'])) {
+        header('Location: profile.php');
+    }
+
     if(!empty($_POST['uname']) && !empty($_POST['pass'])) { // if the fields are not empty
         require $path."../../../dbConnect.inc";
         
@@ -30,18 +34,21 @@
     } 
 
 ?>
-<body>
-    <img class = "toppic" src = "assets/img/profile.png" alt="Learnel Kernel Profile">
+<img class = "toppic" src = "assets/img/profile.png" alt="Learnel Kernel Profile">
     <div class = "content">
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <p>User Name:</p>
         <input type="text" name="uname" id="uname" /><br />
         
         Password:
         <input type="password" name="pass" id="pass" /><br />
         
-        <input type="submit" value="Submit form" /><input type="reset" value="Reset form" /><br />
+        <input type="submit" value="Log In" />
+        
+        <input type="reset" value="Reset" /><br />
+            
         <input type="button" value ="Register" onclick="window.location='register.php'" />
+        </form>
     </div>
 </body>
 <?php
