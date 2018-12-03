@@ -396,3 +396,38 @@ CSS for Exercises begins
 /*
 CSS for Exercises ends
 */
+
+
+/*
+CSS for Profile begins
+*/
+
+.chapterHolder {
+    width: 200px;
+    background-color: white;
+    display: block;
+}
+
+.chapterHolder:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.chapImg {
+    width: 150px;
+    height: auto;
+    display: inline-block;
+    float: left;
+}
+
+.checkImg {
+    width: 50px;
+    height: auto;
+    display: inline-block;
+    float: left;
+}
+
+/*
+CSS for Profile ends
+*/
