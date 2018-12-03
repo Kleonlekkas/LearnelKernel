@@ -7,6 +7,15 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="assets/js/script.js"></script>
     <title>Learnel Kernel - <?php echo $page ?></title>
+
+		<?php
+			if (strcmp($page, "Terminal") == 0) {
+		?>
+			<link rel="stylesheet" type="text/css" href="assets/css/terminal.css">
+			<script src="assets/js/terminal.js"></script>
+		<?php
+			}
+		?>
 </head>
 <header>
     <div class="topnav" id="myTopnav">
