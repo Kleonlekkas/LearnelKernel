@@ -16,7 +16,7 @@
 		    <a href="story.php">Story</a>
 		    <a href="command.php">Terminal</a>
 		    <a href="poem.php">Alma Mater</a>
-		    <a href="profile.php">Profile</a>
+		    <a href="login.php">Profile</a>
         <a href="javascript:void(0);" class="icon" onclick="menuHider()">&#9776;</a>
     </div>
 </header>

@@ -18,8 +18,6 @@ function menuHider() {
 // Begin JS for Nav Bar
 //
   
-
-
 /*
 BEGIN EXERCISE JS
 */
@@ -219,5 +217,3 @@ function genNumOrder() {
 /*
 END EXERCISE JS
 */
-  
-  

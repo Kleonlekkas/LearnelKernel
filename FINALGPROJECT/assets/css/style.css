@@ -136,6 +136,7 @@ body {
     flex-direction: column;
     margin: 0;
     background-color: #fff; /* white background */
+    font-family: 'Roboto', sans-serif;
 }
 
 .content{
@@ -179,6 +180,70 @@ body {
 CSS for the body ends
 */
 
+/*
+CSS for forms begins
+*/
+.content input[type=text], 
+.content input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=reset]{
+    background-color: #FF5A5C;
+}
+
+input[type=submit]{
+    background-color: #44A7FE;
+}
+
+input[type=button]{
+    background-color: #4CAF50;
+    padding: 14px, 20px;
+}
+
+input[type=submit],
+input[type=reset],
+input[type=button]{
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    margin: 10px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover{
+    background-color: #45a049;
+}
+
+input[type=reset]:hover{
+    background-color: #FC4949;
+}
+
+input[type=submit]:hover{
+    background-color: #1491FF;
+}
+
+@media screen and (max-width: 910px) {
+    .content{
+        margin: auto;
+        width: 75%;
+        border: 2px solid #F8F9F9;
+        text-align: center;
+        padding: 2em;
+        background-color: #F8F9F9;
+        border-radius: 10px;
+    }  
+  }
+
+/*
+CSS for forms ends
+*/
 
 /*
 CSS for Exercises begins
@@ -330,17 +395,4 @@ CSS for Exercises begins
 
 /*
 CSS for Exercises ends
-*/
-
-
-/*
-CSS for Alma Mater begins
-*/
-
-.sec1, .sec2, .sec3, .sec4, .sec5, .sec6 {
-    visibility: visible;
-}
-
-/*
-CSS for Alma Mater ends
 */
