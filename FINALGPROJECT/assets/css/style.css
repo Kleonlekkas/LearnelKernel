@@ -528,3 +528,21 @@ input[type=checkbox]{
     }
 }
 /*End of Review*/
+
+/*CSS for Learn begins*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url('Montserrat-SemiBold.ttf') format('TrueType');
+} /* just have the change the path probably */
+
+.content p{
+    text-align: left;
+}
+
+.quiz{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*CSS for Learn ends*/
