@@ -1,14 +1,3 @@
-function httpRequest(method, url, callback) {
-	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function() {
-   if (this.readyState == 4 && this.status == 200) {
-     callback(this);
-   }
- 	};
-	xmlhttp.open(method, url);
-	xmlhttp.send();
-}
-
 document.addEventListener("DOMContentLoaded", function(event) {
    // the DOM is ready
 
@@ -19,37 +8,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
    let history = [];
    let historyPos = 0;
 
-    // map command ==> output
+		// custom command map, command ==> output
     let cmdMap = {
-
-       help: function(params) {
-         printTerminal("Available commands:");
-         printTerminal("<strong>help</strong> - List available commands.");
-         printTerminal("<strong>clear</strong> - Clear the screen.");
-         printTerminal("<strong>params</strong> - Test parsing of parameters, outputs list of parameters arg1,arg2,etc.");
-				 printTerminal("<strong>ls</strong> - List files and directories.");
-				 printTerminal("<strong>pwd</strong> - Print working directory.");
-       },
 
        clear: function(params) {
          // clear terminal
          terminal.innerHTML = "";
        },
 
-       ls: function(params) {
-         printTerminal("Apples<br>Bananas<br>Cats");
-       },
-
-       params: function(params) {
-         printTerminal("Params: " + params);
-       },
-
-			 pwd: function(params) {
-				 // print working directory
-				 httpRequest('GET', 'cmds/pwd.php', function(self) {
-						printTerminal(JSON.parse(self.responseText));
-				 });
-       },
     }
 
    cmdBox.addEventListener("keyup", function(e) {
@@ -94,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
    })
 
    function evalCommand(cmd) {
-     // split command by spaces ignoring empty
+		 // split command by spaces ignoring empty
      let args = cmd.split(" ").filter(function(el) {return el.length != 0});
 
      // command is first argument, parameters are the rest
@@ -106,13 +72,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
      // add command to terminal window
      printTerminal("$ " + cmd);
 
-     // evaluate command
+		 // evaluate command
      if (command in cmdMap) {
        // call command in map with given parameters
        cmdMap[command](params);
      } else if (command) {
-       // command is not null
-       printTerminal(command + ": command not found");
+       // command is not null, use php...
+			 var xmlhttp = new XMLHttpRequest();
+			 xmlhttp.onreadystatechange = function() {
+				 if (this.readyState == 4 && this.status == 200) {
+					 // parse shell line breaks
+					 var resp = this.responseText.replace(/(?:\r\n|\r|\n)/g, '<br>');
+					 printTerminal(resp);
+				 }
+			 };
+			 xmlhttp.open("GET", "shell.php?cmd=" + encodeURI(cmd), true);
+			 xmlhttp.send();
      }
 
      // scroll down terminal
@@ -122,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
    function initTerminal() {
      // welcome message
      printTerminal("Welcome to the interactive terminal");
-     printTerminal("Type <b>help</b> for a list of available commands.");
+     printTerminal("Type <b>help</b> for a list of available commands, type <b>clear</b> to clear the screen.");
    }
 
    function printTerminal(text) {
