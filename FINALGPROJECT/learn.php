@@ -62,11 +62,11 @@ include 'assets/inc/header.php';
         //with each individual value
         makeQuizObjects(
             <?php echo $this_row['unit']; ?>,
-            <?php echo "\"" . $this_row['question'] . "\""; ?>,
-            <?php echo "\"" . $this_row['a1'] . "\""; ?>,
-            <?php echo "\"" . $this_row['a2'] . "\""; ?>,
-            <?php echo "\"" . $this_row['a3'] . "\""; ?>,
-            <?php echo "\"" . $this_row['a4'] . "\""; ?>
+            <?php echo "\"" . addslashes($this_row['question']) . "\""; ?>,
+            <?php echo "\"" . addslashes($this_row['a1']) . "\""; ?>,
+            <?php echo "\"" . addslashes($this_row['a2']) . "\""; ?>,
+            <?php echo "\"" . addslashes($this_row['a3']) . "\""; ?>,
+            <?php echo "\"" . addslashes($this_row['a4']) . "\""; ?>
         );
     
     </script>
