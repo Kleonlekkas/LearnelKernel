@@ -1,5 +1,5 @@
 <?php
-$page = "Learnel Kernel - Review";
+$page = "Review";
 include 'assets/inc/header.php';
 require "../../../dbConnect.inc";
 session_start();
@@ -12,36 +12,40 @@ session_start();
     <form action="process.php" method="POST" class="content" onsubmit="return validateForm();">
         
         
-        <p>What is your name?</p>
-            <input type="text" name="name" 
-                   id="name" placeholder="Your Full Name" />
+        <div class="question">
+            <p>What is your name?</p>
+            <input type="name" name="name" id="name" placeholder="Your Full Name" />
+        </div><!--end of div question-->
         
+        <div class="question">
             <p>When did you visit?</p>
             <input type="date" name="notdate" id="notdate" />
+        </div><!--end of div question-->
         
+        <div class="question">
             <p>How many quizzes did you attempt?</p>
             <input type="number" min="1" name="quiz" id="quiz" value="1" />
             <br />
             <br />
+        </div><!--end of div question-->
         
         <!-- fieldset with legend and radio input -->
-        <fieldset id="fieldset1">
+        <fieldset id="fieldset">
             <legend>Did you learn something?</legend>
             <div class="indent">
-                <label for="beach1">Yes<input type="radio" id="yes"
-                        name="learn" value="yes"  onclick="testValue()" /></label><br />
+                <label for="yes">Yes<input type="radio" id="yes" name="learn" value="yes" onclick="testValue()" /></label><br />
                 
-                <label for="fair">Maybe<input type="radio" id="maybe"
-                        name="learn" value="maybe"  onclick="testValue()" /></label><br />
+                <label for="maybe">Maybe<input type="radio" id="maybe"
+                name="learn" value="maybe"  onclick="testValue()" /></label><br />
                 
-                <label for="beach2">No<input type="radio" id="no"
-                        name="learn" value="no"  onclick="testValue()" /></label><br />
+                <label for="no">No<input type="radio" id="no"
+                name="learn" value="no"  onclick="testValue()" /></label><br />
             </div>
         </fieldset> <br />
         
         <!-- checkbox input -->
             
-            <fieldset>
+            <fieldset id="fieldset">
                 <legend>What pages did you visit?</legend>
                 <div class="indent">
                     <label for="home">The Homepage<input type="checkbox" id="home" name="webpage" value="The Homepage" /></label><br />
