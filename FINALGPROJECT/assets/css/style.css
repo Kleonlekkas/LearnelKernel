@@ -387,7 +387,7 @@ CSS for Exercises begins
     width: 98%; 
 }
 
-.errorAnswer{
+.errorAnswer, .wrongAnswer{
     color: red;
     font-weight: bold;
     display: none;
