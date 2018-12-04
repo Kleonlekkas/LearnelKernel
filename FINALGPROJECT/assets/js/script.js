@@ -73,10 +73,15 @@ function validateQuiz(quizUnit) {
              quiz.getElementsByClassName("errorAnswer")[0].style.display="none";
     }
     
+
+    
     //If we're returning true, then we should check their score
     if (ret) {
-        checkAnswers(quizUnit);
+        //will return true if all answers correct, otherwise return false
+        ret = checkAnswers(quizUnit);
     }
+    
+    console.log("RETURN = " + ret);
 
     return ret;
 
@@ -131,6 +136,51 @@ function checkAnswers(ourQuizUnit) {
         }//END ANSWER LOOP       
     }//END QUESTION LOOP
     
+    
+    /*
+    
+    UPDATE `learnel_login` SET `ch3` = '1' WHERE `learnel_login`.`uname` = 'PrettyPatty'
+    
+    UPDATE `learnel_login` SET `ch1` = '0' WHERE `learnel_login`.`uname` = 'PrettyPatty';
+    */
+    
+    //they got all of them correct
+    if ((numCorrect/numQuestions) == 1) {
+        var chapElem = quiz.getElementsByClassName("chapName");
+        var chapText = "chapterText";
+        
+        if (ourQuizUnit == "quiz1") {
+            chapText = "ch1";
+        }
+        if (ourQuizUnit == "quiz2") {
+            chapText = "ch2";
+        }
+        if (ourQuizUnit == "quiz3") {
+            chapText = "ch3";
+        }
+        if (ourQuizUnit == "quiz4") {
+            chapText = "ch4";
+        }
+        if (ourQuizUnit == "quiz5") {
+            chapText = "ch5";
+        }
+        if (ourQuizUnit == "quiz6") {
+            chapText = "ch6";
+        }
+        
+        chapElem[0].value = chapText;
+        
+        quiz.getElementsByClassName("wrongAnswer")[0].style.display="none";
+        
+        //they got all of them correct
+        return true;
+        
+    } else {
+        
+        //Let em know an answer is incorrect
+        quiz.getElementsByClassName("wrongAnswer")[0].style.display="inline";
+        return false;
+    }
    console.log("Answers right: " + numCorrect);
     
 }//END CHECK ANSER FUNC
