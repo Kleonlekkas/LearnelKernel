@@ -6,6 +6,39 @@ include 'assets/inc/header.php';
 <?php
     $path = './';
 	require $path.'../../../dbConnect.inc';
+    //This should only run if a quiz was just completed and the data values were set
+    if (isset($_POST['username'])) {
+        if (isset($_POST['quizchap'])) {
+            $loadedName = $_POST['username'];
+            $loadedChap = $_POST['quizchap'];
+            
+            //send the data to our server
+            if ($mysqli) {
+                //IM SO HAPPY
+                $sql = "UPDATE `learnel_login` SET `" . $loadedChap . "` = '1' WHERE `learnel_login`.`uname` = '" . $loadedName . "'";
+        
+                $res=$mysqli->query($sql);
+            }//end mysqli if
+            
+        }//end quizchap if
+    }//end username if
+
+    //Give the session name a var on javascript side
+    session_start();
+
+    if (isset($_SESSION['name'])) {
+        $username = $_SESSION['name'];
+    } else {
+        $username = '';
+    }
+
+?>
+    <script>
+        var userName = <?php echo "\"" . $username . "\"";?>;
+        //our function in the phpScript include
+    </script>
+
+<?php
     
     //Get Data
 	if ($mysqli) {
@@ -52,7 +85,7 @@ include 'assets/inc/header.php';
     
     <button onclick="revealQuiz('quiz1')" class="loadQuiz" type="button">Start Quiz 1!</button>
  
-<form action="" id="quiz1" method="GET" class="myForm" onsubmit="return false">
+<form action="learn.php" id="quiz1" method="POST" class="myForm" onsubmit="return validateQuiz('quiz1')">
     
         <!----------QUESTION 1------------>
   		<fieldset>
@@ -75,9 +108,13 @@ include 'assets/inc/header.php';
                 <label for="d">D: <input type="radio" id="1d" name="ans2"       value="d" /><span class="answer">answer here</span>   </label>                 
             </div>
 	   </fieldset>
+        <!-- what we'll pass through on quiz completion to update their values in database-->
+        <input type="hidden" name="username" value="<?php echo $username; ?>"/>
+        <input class="chapName" type="hidden" name="quizchap" value=""/>
   		
-        <input type="submit" class="button" value="Send" onclick="validateQuiz('quiz1')" />
+        <input type="submit" class="button" value="Send"  />
     <span class="errorAnswer">You need to answer each question.</span>
+    <span class="wrongAnswer">An answer is incorrect.</span>
 
 </form>
         
@@ -90,7 +127,7 @@ include 'assets/inc/header.php';
     
     <button onclick="revealQuiz('quiz2')" class="loadQuiz" type="button">Start Quiz 2!</button>
  
-<form action="" id="quiz2" method="GET" class="myForm" onsubmit="return false">
+<form action="" id="quiz2" method="POST" class="myForm" onsubmit="return false">
     
         <!----------QUESTION 1------------>
   		<fieldset>
