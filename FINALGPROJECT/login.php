@@ -34,7 +34,7 @@
     } 
 
 ?>
-    <img class = "toppic" src = "assets/img/profile.png" alt="Learnel Kernel Profile">
+<img class = "toppic" src = "assets/img/profile.png" alt="Learnel Kernel Profile">
     <div class = "content">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <p>User Name:</p>
@@ -50,6 +50,7 @@
         <input type="button" value ="Register" onclick="window.location='register.php'" />
         </form>
     </div>
+</body>
 <?php
 include 'assets/inc/footer.php';
 ?>

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="assets/img/penguinLogoColor.png">
     <script src="assets/js/script.js"></script>
     <title>Learnel Kernel - <?php echo $page ?></title>
-
-		<?php
+    <?php
 			if (strcmp($page, "Terminal") == 0) {
 		?>
 			<link rel="stylesheet" type="text/css" href="assets/css/terminal.css">
@@ -17,7 +17,6 @@
 			}
 		?>
 </head>
-<body <?php if (strcmp($page, "Learn") == 0) { ?>onload="makeQuizzes()" <?php } ?> >
 <header>
     <div class="topnav" id="myTopnav">
         <a class="active" href="index.php"><img class="logo" src="assets/img/penguinLogoColor.png"></a>

@@ -81,7 +81,7 @@ include 'assets/inc/header.php';
             Other famous and popular operating systems are Windows, OSX,  iOS, and Windows XP; though, Linux is an <b>open-source</b> operating system which makes Linux a little cooler from those other operating systems. Open-source software refers to software where the source code is openly available and able to be changed (by you, the user!). Open-source also implies free-use, meaning there is no pay wall behind using or editing Linux.
             The final piece to defining Linux is that is based on <b>UNIX</b>, another operating system although, unlike Linux, neither open-source nor free to use. Linux is free :D
             All in all, here is a definition for Linux: <b>Linux is an open-source operating system based off UNIX.</b> Thatll be on a quiz so make sure to remember that definition!
-        </p>
+        </p>    
         <h2>History of Linux</h2>
         <p>
             Linux was developed by a finnish undergraduate student, Linus Torvalds, after he did not wish to work on MINUX anymore. MINUX was another operating system built off of UNIX, though still not open source. Linus wanted to make his own free-use open-source operating system and so he did. Linux was born. There is a lot more to this story with a bunch of tech talk about code bases but that is a little beyond the level we are discussing here.
@@ -106,10 +106,10 @@ include 'assets/inc/header.php';
         </p>
         
 <!-- *********************QUIZ 1 ********************** -->  
-    <div class="quiz">
+    
+<div class="quiz">
         <button onclick="revealQuiz('quiz1')" class="loadQuiz" type="button">Start Quiz 1!</button>
     </div>
-        
  
 <form action="learn.php" id="quiz1" method="POST" class="myForm" onsubmit="return validateQuiz('quiz1')">
     
@@ -134,6 +134,37 @@ include 'assets/inc/header.php';
                 <label for="d">D: <input type="radio" id="1d" name="ans2"       value="d" /><span class="answer">answer here</span>   </label>                 
             </div>
 	   </fieldset>
+       <!----------QUESTION 3------------>
+       <fieldset>
+            <legend class="question">Whats the answer?</legend>
+            <div class="indent">
+                <label for="a">A: <input type="radio" id="1a" name="ans3"       value="a" /><span class="answer">answer here</span> </label> 
+                <label for="b">B: <input type="radio" id="1b" name="ans3"       value="b" /> <span class="answer">answer here</span>  </label> 
+                <label for="c">C: <input type="radio" id="1c" name="ans3"       value="c" /><span class="answer">answer here</span>   </label> 
+                <label for="d">D: <input type="radio" id="1d" name="ans3"       value="d" /><span class="answer">answer here</span>   </label>                 
+            </div>
+	   </fieldset>
+    	
+    	        <!----------QUESTION 4------------>
+  		<fieldset>
+            <legend class="question">Whats the answer?</legend>
+            <div class="indent">
+                <label for="a">A: <input type="radio" id="1a" name="ans4"       value="a" /><span class="answer">answer here</span> </label> 
+                <label for="b">B: <input type="radio" id="1b" name="ans4"       value="b" /> <span class="answer">answer here</span>  </label> 
+                <label for="c">C: <input type="radio" id="1c" name="ans4"       value="c" /><span class="answer">answer here</span>   </label> 
+                <label for="d">D: <input type="radio" id="1d" name="ans4"       value="d" /><span class="answer">answer here</span>   </label>                 
+            </div>
+	   </fieldset>
+              <!----------QUESTION 5------------>
+  		<fieldset>
+            <legend class="question">Whats the answer?</legend>
+            <div class="indent">
+                <label for="a">A: <input type="radio" id="1a" name="ans5"       value="a" /><span class="answer">answer here</span> </label> 
+                <label for="b">B: <input type="radio" id="1b" name="ans5"       value="b" /> <span class="answer">answer here</span>  </label> 
+                <label for="c">C: <input type="radio" id="1c" name="ans5"       value="c" /><span class="answer">answer here</span>   </label> 
+                <label for="d">D: <input type="radio" id="1d" name="ans5"       value="d" /><span class="answer">answer here</span>   </label>                 
+            </div>
+	   </fieldset>
         <!-- what we'll pass through on quiz completion to update their values in database-->
         <input type="hidden" name="username" value="<?php echo $username; ?>"/>
         <input class="chapName" type="hidden" name="quizchap" value=""/>
@@ -145,6 +176,7 @@ include 'assets/inc/header.php';
 </form>
         
     </div><!--END CHAPTER 1 CONTENT DIV-->
+
     <img class = "toppic" src = "assets/img/chapter2.png" alt="Learnel Kernel chapter">
     <div class = "content">
         <h2>What the heckle smheck is a permission?</h2>
@@ -208,34 +240,85 @@ include 'assets/inc/header.php';
         </p>
         
         <h2>NEXT UP: Unit 3 - File Structures</h2>        
-        
         <!-- *********************QUIZ 2 ********************** -->  
     
-        <div class="quiz">
-            <button onclick="revealQuiz('quiz2')" class="loadQuiz" type="button">Start Quiz 2!</button>
-        </div>
- 
-<form action="" id="quiz2" method="POST" class="myForm" onsubmit="return false">
-    
-        <!----------QUESTION 1------------>
-  		<fieldset>
-            <legend class="question">Whats the answer?</legend>
-            <div class="indent">
-                <label for="a">A: <input type="radio" id="1a" name="ans1"       value="a" /><span class="answer">answer here</span> </label> 
-                <label for="b">B: <input type="radio" id="1b" name="ans1"       value="b" /> <span class="answer">answer here</span>  </label> 
-                <label for="c">C: <input type="radio" id="1c" name="ans1"       value="c" /><span class="answer">answer here</span>   </label> 
-                <label for="d">D: <input type="radio" id="1d" name="ans1"       value="d" /><span class="answer">answer here</span>   </label>                 
+            <div class="quiz">
+                <button onclick="revealQuiz('quiz2')" class="loadQuiz" type="button">Start Quiz 2!</button>
             </div>
-	   </fieldset>
-  		
-        <input type="submit" class="button" value="Send" onclick="validateQuiz('quiz2')" />
-    <span class="errorAnswer">You need to answer each question.</span>
+        
 
-</form>
-    </div><!-- END CHAPTER 2 CONTENT DIV-->
+        <form action="learn.php" id="quiz2" method="POST" class="myForm" onsubmit="return validateQuiz('quiz2')">
+     
+         <!----------QUESTION 1------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans1"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans1"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans1"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans1"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+         
+                 <!----------QUESTION 2------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans2"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans2"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans2"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans2"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+        <!----------QUESTION 3------------>
+        <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans3"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans3"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans3"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans3"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+         
+                 <!----------QUESTION 4------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans4"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans4"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans4"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans4"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+               <!----------QUESTION 5------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans5"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans5"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans5"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans5"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+         <!-- what we'll pass through on quiz completion to update their values in database-->
+         <input type="hidden" name="username" value="<?php echo $username; ?>"/>
+         <input class="chapName" type="hidden" name="quizchap" value=""/>
+           
+         <input type="submit" class="button" value="Send"  />
+     <span class="errorAnswer">You need to answer each question.</span>
+     <span class="wrongAnswer">An answer is incorrect.</span>
+ 
+ </form>
+
+    </div>
+    
+    <!-- END CHAPTER 2 CONTENT DIV-->
+
+    <!-- BEG CHAPTER 3 CONTENT DIV-->
     <img class = "toppic" src = "assets/img/chapter3.png" alt="Learnel Kernel chapter">
     <div class = "content">
-        <h2>Unit 3 - What is File Structure?</h2>
+<h2>Unit 3 - What is File Structure?</h2>
         <p>
         The <b>file structure</b> of Linux is rather basic, but very important to understand before jumping into the command line. When you are on the command line, it is easy to sometimes become lost. Working with a bunch of words and numbers without images can be very daunting and confusing. This is because there is no visual representation like the Windows file explorer. Instead, you will have the name of the folder you are in on the current line of the command line. That's why we are going to look at the basic file structure. Keep in mind that what we are looking at will be an example, if you already have files or folders, you may have more entries than what we see here.
         </p>
@@ -252,11 +335,84 @@ include 'assets/inc/header.php';
         <p>It may seem a little confusing at first, but after navigating the file structure for a while you will get the hang of it! Before we get to the commands, the most useful command for you in the case you get lost in the files is “cd ~”, that will bring you back to your home directory. We will be recapulating some of these terms as well as unit 2 terms in the next unit:</p>
         
         <h2>NEXT UP: Unit 4 - Commands</h2>
-   
-    </div>
+        
+        
+
+        <!-- *********************QUIZ 3 ********************** -->  
+    
+        <div class="quiz">
+            <button onclick="revealQuiz('quiz3')" class="loadQuiz" type="button">Start Quiz 3!</button>
+        </div>
+        </div>
+ <form action="learn.php" id="quiz3" method="POST" class="myForm" onsubmit="return validateQuiz('quiz3')">
+     
+         <!----------QUESTION 1------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans1"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans1"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans1"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans1"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+         
+                 <!----------QUESTION 2------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans2"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans2"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans2"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans2"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+        <!----------QUESTION 3------------>
+        <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans3"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans3"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans3"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans3"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+         
+                 <!----------QUESTION 4------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans4"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans4"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans4"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans4"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+               <!----------QUESTION 5------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans5"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans5"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans5"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans5"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+         <!-- what we'll pass through on quiz completion to update their values in database-->
+         <input type="hidden" name="username" value="<?php echo $username; ?>"/>
+         <input class="chapName" type="hidden" name="quizchap" value=""/>
+           
+         <input type="submit" class="button" value="Send"  />
+     <span class="errorAnswer">You need to answer each question.</span>
+     <span class="wrongAnswer">An answer is incorrect.</span>
+ 
+ </form>
+
+    <!-- END CHAPTER 3 CONTENT DIV-->
+    <!-- BEG CHAPTER 4 CONTENT DIV-->
     <img class = "toppic" src = "assets/img/chapter4.png" alt="Learnel Kernel chapter">
     <div class = "content">
-        <h2>Unit 4 - Commands: </h2>
+    <h2>Unit 4 - Commands: </h2>
         <h2>What are commands?</h2>
         <p><b>Commands</b> are fun and interactive! Want to actually use the terminal/command line we talked about in unit 1? Commands are how you do it. The terminal goes deeply into file structure, so through learning commands, you will also learn how the file structure of Linux works. Thats a double whammy!
         </p>
@@ -267,23 +423,23 @@ include 'assets/inc/header.php';
         
         <p>The first command we are going to look at is one of the most useful commands in Linux! The command is <b>“pwd”</b> which means “Print Working Directory”. As you can see below, pwd prints to the command line where you are (in terms of files):</p>
         
-        <!--IMAGE HERE-->
+        <img src="assets/img/pwd.png" alt="linux command">
         
         <p>This is your default directory/folder. When you launch the terminal you will be here. /home contains all of the users on the computer, and /xdfx is my username. It is very useful for keeping track of where you are because sometimes you can become lost. You can use pwd hand-in-hand with the other command, <b>“cd”</b> as cd changes your current directory to the file name. In this case, typing “cd xdfx” will set the current directory to /home/xdfx like shown in the picture above. All you need to do is type “cd” and then the name of file you want to access after.</p>
         
         <p>The next command we are going to look at is <b>“ls”</b>. It means “list” and it displays all the files in the directory you are in. You can also attach <b>modifiers</b> to commands. Modifiers allow for commands to be more specific or provide additional functionality. In this case, try tagging <b>“ -la”</b> on to the end of “ls”. So go ahead and type in “ls -la”. There are so many different combinations, but for now we are going to stick with this one. You can see “ls -la” gives a much longer and more detailed list of what is in our directory. Do you notice anything that you learned before? If you look on the left side, you will see the permissions of all of the files from unit 2. </p>
         
-        <!--IMAGE HERE -->
+        <img src="assets/img/ls.png" alt="linux command">
         
         <p>Next we are going to learn how to make a new directory! Believe it or not it is actually very simple with the <b>“mkdir”</b> command. For our example we are going to make a directory called “learnel”. All you need to do is type in “mkdir learnel” and hit enter. After making a directory or file, I like to make sure it worked, so after you type that in, do another “ls -la” to make sure it worked</p>
         
-        <!--IMAGE HERE-->
+        <img src="assets/img/mkdir.png" alt="linux command">
         
         <p>As you can see, “learnel” has now appeared in our results for “ls -la” and tells us all the information on the directory we just made. Notice how the permissions are all available. That is beings setting permissions come with different commands! We will look into that a little later in this unit with the “chmod” commands.</p>
         
         <p>Now we are going to learn how to navigate into a directory and create a new text file using the <b>“touch”</b> command. All you have to do is type in “cd [directoryname]” (like we discussed earlier) so in our case we are going to type in “cd learnel”. After moving in there we are going to make a text file. To do that all we are going to do is type “touch hello.txt”. This will create our txt file. Congratulations, you done did it friendly learnel kernel learner!</p>
         
-        <!-- IMAGE HERE -->
+        <img src="assets/img/touch.png" alt="linux command">
         
         <p>Now before we access the file, we need to make sure we have the proper permissions to access the file. All we need to do is type in “chmod ### hello.txt ”. The command, <b>“chmod”</b>, changes the permissions, but the numbers (#) can be whatever you want. Look back to the unit 2 and think about what we need the three numbers to be so WE can read, write, and execute it. We only want others and the group to be able to read and execute it. </p>
         
@@ -291,7 +447,7 @@ include 'assets/inc/header.php';
         
         <p>In the case you couldnt get the file permissions right it should be “chmod 755 hello.txt”</p>
         
-        <!--IMAGE HERE-->
+        <img src="assets/img/chmod_nano_cat.png" alt="linux command">
         
         <p>The nano text editor can access different types of text and code files alike. This means in an online Linux terminal, you can edit code associated with website files without having to upload or download anything! Isnt that a little fun fact for ya?</p>
         
@@ -302,10 +458,85 @@ include 'assets/inc/header.php';
         
         <h2>NEXT UP: Unit 5 - Bash</h2>
         
-    </div>
+        
+
+        <!-- *********************QUIZ 4 ********************** -->  
+    
+        <div class="quiz">
+            <button onclick="revealQuiz('quiz4')" class="loadQuiz" type="button">Start Quiz 4!</button>
+        </div>
+        </div>
+ <form action="learn.php" id="quiz4" method="POST" class="myForm" onsubmit="return validateQuiz('quiz4')">
+
+ 
+     
+         <!----------QUESTION 1------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans1"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans1"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans1"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans1"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+         
+                 <!----------QUESTION 2------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans2"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans2"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans2"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans2"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+        <!----------QUESTION 3------------>
+        <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans3"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans3"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans3"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans3"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+         
+                 <!----------QUESTION 4------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans4"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans4"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans4"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans4"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+               <!----------QUESTION 5------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans5"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans5"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans5"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans5"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+         <!-- what we'll pass through on quiz completion to update their values in database-->
+         <input type="hidden" name="username" value="<?php echo $username; ?>"/>
+         <input class="chapName" type="hidden" name="quizchap" value=""/>
+           
+         <input type="submit" class="button" value="Send"  />
+     <span class="errorAnswer">You need to answer each question.</span>
+     <span class="wrongAnswer">An answer is incorrect.</span>
+ 
+ </form>
+
+    <!-- END CHAPTER 4 CONTENT DIV-->
+    <!-- BEG CHAPTER 5 CONTENT DIV-->
     <img class = "toppic" src = "assets/img/chapter5.png" alt="Learnel Kernel chapter">
     <div class = "content">
-        <h2>Unit 5 - Bash</h2>
+    <h2>Unit 5 - Bash</h2>
         <p>A little note before we get started, <b>Bash</b> is a little more complicated than what we have been doing so far (yes… even permissions), we are going to do our best to dip your toes in the water, but it may still be a little complicated. We are going to use some commands that you haven’t seen yet, but we will give you a brief definition of what they do.
         </p>
         
@@ -319,7 +550,7 @@ include 'assets/inc/header.php';
         
         <p>First we are going to learn about the “echo” command. All you have to type in is “echo “[whatever you want in here]”” or you can do “echo [variable name]” to print out a <b>variable</b>. A variable is a made up piece of code that you can assign anything some type of value to, like a text message (a <b>string</b>) or a number (<b>int</b>). So for this first step we are going to make it print out “Hello World” see if you can figure it out yourself. You will be able to see the code below if you need help.</p>
         
-        <!--IMAGE HERE-->
+        <img src="assets/img/nano_hello.png" alt="linux command">
         
         <p>Next what we are going to do is make our script, “hello.sh”, add two numbers, store them into a variable and then print out the variable. All you need to do is make your variable do something… or mean something. This is called “<b>defining</b>” the variable. You can name your variable whatever you want except for some <b>keywords</b> reserved in the Bash language. Also, variables cannot share names, so if you ever want to use more than one variable, name it something different from every other variable you are using. You’ll probably be safe with a variable name if you type “turtleMan” in the name at any point. Just a little hint.</p>
         
@@ -339,15 +570,15 @@ include 'assets/inc/header.php';
 
         <p>Here is more or less the same text as my example above, just written as a script</p>
         
-        <!--IMAGE HERE-->
+        <img src="assets/img/nano_add.png" alt="linux command">
         
         <P>The final task we are going to accomplish is saving the output of a command to a file. All you simply have to do is “ >> [filename]”. So all that being said, lets perform a “ls -la” and then save the output to a file called “out.txt” (<b>so “ls -la >> out.txt” in the terminal</b>), then modify your script so that it opens out.txt. Remember the “cat” command from the previous chapter? Hint hint, use that :) </P>
         
-        <!--IMAGE HERE -->
+        <img src="assets/img/nano_cat.png" alt="linux command">
         
         <p>In the end, your output should look like this</p>
         
-        <!--IMAGE HERE-->
+        <img src="assets/img/nano_fin.png" alt="linux command">
         
         <p>That wraps up our short intro to bash. It is very powerful and can do very complex tasks if used right. There are an infinite number of things you can do with bash. As you learn more commands, you can learn to do more with bash. Due to how complex it is and for beginners sake, we are going to leave it here. If you are interested in doing more, check youtube there are plenty of tutorials that will help you become a Bash Master!</p>
         
@@ -357,11 +588,83 @@ include 'assets/inc/header.php';
         
         <p>We discussed how to create a bash file and how to work with print statements (echo) and variables, mostly integers (numbers) and addition. Finally, we learned how to insert the results of a command (like getting a list for “ls -la”) into a text document (out.txt in our case). This lesson combined components of the last 2 chapters, so if you felt lost in any part regarding commands or the terminal, take a look back at those chapter to strengthen your understanding.</p>
         
-        <h2>NEXT UP: Unit 6 - Where do we go from here?</h2>
-    </div>
+        <h2>NEXT UP: Unit 6 - Where do we go from here?</h2>    
+
+        <!-- *********************QUIZ 5 ********************** -->  
+    
+        <div class="quiz">
+            <button onclick="revealQuiz('quiz5')" class="loadQuiz" type="button">Start Quiz 5!</button>
+        </div>
+        </div>
+ <form action="learn.php" id="quiz5" method="POST" class="myForm" onsubmit="return validateQuiz('quiz5')">
+     
+         <!----------QUESTION 1------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans1"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans1"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans1"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans1"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+         
+                 <!----------QUESTION 2------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans2"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans2"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans2"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans2"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+        <!----------QUESTION 3------------>
+        <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans3"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans3"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans3"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans3"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+         
+                 <!----------QUESTION 4------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans4"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans4"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans4"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans4"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+               <!----------QUESTION 5------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans5"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans5"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans5"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans5"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+         <!-- what we'll pass through on quiz completion to update their values in database-->
+         <input type="hidden" name="username" value="<?php echo $username; ?>"/>
+         <input class="chapName" type="hidden" name="quizchap" value=""/>
+           
+         <input type="submit" class="button" value="Send"  />
+     <span class="errorAnswer">You need to answer each question.</span>
+     <span class="wrongAnswer">An answer is incorrect.</span>
+ 
+ </form>
+
+    <!-- END CHAPTER 5 CONTENT DIV-->
+    <!-- BEG CHAPTER 6 CONTENT DIV-->
     <img class = "toppic" src = "assets/img/chapter6.png" alt="Learnel Kernel chapter">
     <div class = "content">
-        <h2>Unit 6 - Where to go from here?</h2>
+    <h2>Unit 6 - Where to go from here?</h2>
         <p>We are here at the end of our linux journey. Now you may be asking yourself the question: Where do I go from here? How do I get linux? What can I do with linux? Well we have all of the answers to all of those!</p>
         
         <p>From here you can go over to our terminal page and play around with some of the commands you’ve learned. Not all of them will work, but some definitely will! You can also start to incorporate Linux into your day to day life by making it the main operating system on whichever computer you use. It takes a little bit of learning,  but hopefully we got you off your feet and now have a basic understanding of how Linux works. It definitely has a learning curve if you are use to windows. If you are using an apple machine, however, you have already been using a version of linux so the switch to linux won’t be that big of a leap. </p>
@@ -372,9 +675,37 @@ include 'assets/inc/header.php';
         
         <p>After choosing your distribution all you need to do is install it. Be are installing Linux will delete all of the files off of your computer, so if you are not the owner of you computer (like if it is a family computer), we highly recommend double checking with all the other users of the computer. If you get their approval, go ahead and search youtube for how to install the distribution you chose.</p>
         
-        <p>And that’s it from us, we hope you learneled something from our kernel, now cya friendo!</p>
-        
-    </div>
+        <p>And that’s it from us, we hope you learneled something from our kernel, now cya friendo!</p>    
+
+        <!-- *********************QUIZ 6 ********************** -->  
+    
+        <div class="quiz">
+            <button onclick="revealQuiz('quiz6')" class="loadQuiz" type="button">Start Quiz 6!</button>
+        </div>
+        </div>
+ <form action="learn.php" id="quiz6" method="POST" class="myForm" onsubmit="return validateQuiz('quiz6')">
+     
+         <!----------QUESTION 1------------>
+           <fieldset>
+             <legend class="question">Whats the answer?</legend>
+             <div class="indent">
+                 <label for="a">A: <input type="radio" id="1a" name="ans1"       value="a" /><span class="answer">answer here</span> </label> 
+                 <label for="b">B: <input type="radio" id="1b" name="ans1"       value="b" /> <span class="answer">answer here</span>  </label> 
+                 <label for="c">C: <input type="radio" id="1c" name="ans1"       value="c" /><span class="answer">answer here</span>   </label> 
+                 <label for="d">D: <input type="radio" id="1d" name="ans1"       value="d" /><span class="answer">answer here</span>   </label>                 
+             </div>
+        </fieldset>
+         <!-- what we'll pass through on quiz completion to update their values in database-->
+         <input type="hidden" name="username" value="<?php echo $username; ?>"/>
+         <input class="chapName" type="hidden" name="quizchap" value=""/>
+           
+         <input type="submit" class="button" value="Send"  />
+     <span class="errorAnswer">You need to answer each question.</span>
+     <span class="wrongAnswer">An answer is incorrect.</span>
+ 
+ </form>
+
+    <!-- END CHAPTER 6 CONTENT DIV-->
 
 
 </body>

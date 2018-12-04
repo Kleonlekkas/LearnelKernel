@@ -3,10 +3,8 @@ CSS For Nav Bar Begins
 */
 
 /* For using imported fonts:
-
 font-family: 'Lato', sans-serif;
 font-family: 'Roboto Slab', serif;
-
 */
 
 .topnav > a {
@@ -107,6 +105,11 @@ CSS For Footer Begins
 
 .foot a {
     text-decoration: none;
+}
+
+.time{
+    margin-left: 30%;
+    font-size: .7em;
 }
 
 @media screen and (max-width: 910px) {
@@ -272,7 +275,7 @@ CSS for Exercises begins
 
 /*INITIAL FORMS*/
 /*set invisible*/
-#quiz1, #quiz2, #quiz3 {
+#quiz1, #quiz2, #quiz3, #quiz4, #quiz5, #quiz6 {
     display: none;
 }
 
@@ -317,6 +320,7 @@ CSS for Exercises begins
 .myForm label {
     display: block;
     margin: 0px 0px 5px;
+    padding-right: 25px;
 }
 .myForm label>p {
     float: left;
@@ -335,7 +339,7 @@ CSS for Exercises begins
     height: 30px;
     line-height:15px;
     width: 100%;
-    padding: 0px 0px 0px 10px;
+    padding: 0px 0px 0px 0px;
     margin-top: 2px;
     border: 1px solid #E5E5E5;
     background: #FBFBFB;
@@ -387,7 +391,7 @@ CSS for Exercises begins
     width: 98%; 
 }
 
-.errorAnswer, .wrongAnswer{
+.errorAnswer{
     color: red;
     font-weight: bold;
     display: none;
@@ -402,7 +406,7 @@ CSS for Exercises ends
 CSS for Profile begins
 */
 
-chapterHolder {
+.chapterHolder {
     
     display: block;
     border-style: solid;
@@ -463,6 +467,7 @@ a.out:hover{
 CSS for Profile ends
 */
 
+
 /*
 CSS for Review begins
 */
@@ -490,18 +495,16 @@ input[type=number]:focus{
 
 .indent{
     position:relative;
-	float: left;
     display: inline;
 }
 
 #fieldset label{
     float: left;
-    text-align: right;
-}
+    }
 
 input[type=radio],
 input[type=checkbox]{
-    float: right;
+    float: left;
 }
 
 #fieldset{
@@ -527,7 +530,7 @@ input[type=checkbox]{
         float: none;
     }
 }
-/*End of Review*/
+/*CSS for Review ends*/
 
 /*CSS for Learn begins*/
 @font-face {
@@ -543,6 +546,11 @@ input[type=checkbox]{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+img{
+    height: 50%;
+    width: 50%;
 }
 
 /*CSS for Learn ends*/

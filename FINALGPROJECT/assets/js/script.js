@@ -23,7 +23,7 @@ BEGIN EXERCISE JS
 */
   
 //arr to hold our quizzes
-var quizObjects = [ [],[] ];
+var quizObjects = [ [],[],[],[],[],[] ];
 var quizEnum = {
     "quiz1": 0,
     "quiz2": 1,

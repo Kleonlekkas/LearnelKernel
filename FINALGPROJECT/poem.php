@@ -3,15 +3,17 @@ $page = "Poem";
 include 'assets/inc/header.php';
 session_start();
 ?>
+<body>
     <img class = "toppic" src = "assets/img/alma_mater.png" alt="Learnel Kernel Poem">
     <div class = "content">
+    <p>As you complete quizzes in The Learnel, you will unlock new lines of the Poem!</p>
 <?php
     $path = './';
 	require $path.'../../../dbConnect.inc';
     
     //Get Data
 	if ($mysqli) {
-        if ($_SESSION['name']) {
+        if (isset($_SESSION['name'])) {
                //READ IN QUESTIONS FROM DATABASE
                 $sql = 'SELECT ch1, ch2, ch3, ch4, ch5, ch6 FROM learnel_login WHERE uname="' . $_SESSION['name'] .'"';
                 $res=$mysqli->query($sql);
@@ -66,6 +68,7 @@ session_start();
 ?>
       
     </div>
+</body>
 <?php
 include 'assets/inc/footer.php';
 ?>

@@ -1,9 +1,10 @@
 <?php
-$page = "Review";
+$page = "Learnel Kernel - Review";
 include 'assets/inc/header.php';
 require "../../../dbConnect.inc";
 session_start();
 ?>
+  <body> 
     <!-- form with inputs dedicated -->
 
     <img class = "toppic" src = "assets/img/review.png" alt="Learnel Kernel review">
@@ -11,40 +12,36 @@ session_start();
     <form action="process.php" method="POST" class="content" onsubmit="return validateForm();">
         
         
-        <div class="question">
-            <p>What is your name?</p>
-            <input type="name" name="name" id="name" placeholder="Your Full Name" />
-        </div><!--end of div question-->
+        <p>What is your name?</p>
+            <input type="text" name="name" 
+                   id="name" placeholder="Your Full Name" />
         
-        <div class="question">
             <p>When did you visit?</p>
             <input type="date" name="notdate" id="notdate" />
-        </div><!--end of div question-->
         
-        <div class="question">
             <p>How many quizzes did you attempt?</p>
             <input type="number" min="1" name="quiz" id="quiz" value="1" />
             <br />
             <br />
-        </div><!--end of div question-->
         
         <!-- fieldset with legend and radio input -->
-        <fieldset id="fieldset">
+        <fieldset id="fieldset1">
             <legend>Did you learn something?</legend>
             <div class="indent">
-                <label for="yes">Yes<input type="radio" id="yes" name="learn" value="yes" onclick="testValue()" /></label><br />
+                <label for="beach1">Yes<input type="radio" id="yes"
+                        name="learn" value="yes"  onclick="testValue()" /></label><br />
                 
-                <label for="maybe">Maybe<input type="radio" id="maybe"
-                name="learn" value="maybe"  onclick="testValue()" /></label><br />
+                <label for="fair">Maybe<input type="radio" id="maybe"
+                        name="learn" value="maybe"  onclick="testValue()" /></label><br />
                 
-                <label for="no">No<input type="radio" id="no"
-                name="learn" value="no"  onclick="testValue()" /></label><br />
+                <label for="beach2">No<input type="radio" id="no"
+                        name="learn" value="no"  onclick="testValue()" /></label><br />
             </div>
         </fieldset> <br />
         
         <!-- checkbox input -->
             
-            <fieldset id="fieldset">
+            <fieldset>
                 <legend>What pages did you visit?</legend>
                 <div class="indent">
                     <label for="home">The Homepage<input type="checkbox" id="home" name="webpage" value="The Homepage" /></label><br />
@@ -64,6 +61,7 @@ session_start();
         
             <input type="submit" class="button" id="sendB" value="Send" />&nbsp; &nbsp;<input type="Reset" class="button" value="Reset" />
     </form>
+</body> 
 <?php
 include 'assets/inc/footer.php';
 ?>
