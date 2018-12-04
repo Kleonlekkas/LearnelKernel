@@ -1,0 +1,36 @@
+#terminal {
+  height: 250px;
+  padding: 1em;
+	margin: 0;
+  background-color: #e9ecef;
+  overflow-y: scroll;
+}
+#command {
+	padding: 0.5em 1em;
+	margin: 0;
+}
+
+#command :focus {
+	border-color: #7289da;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+.content {
+	line-height: 1.2em;
+	text-align: left;
+	padding: 0;
+	margin: 0 auto;
+	width: 90%;
+}
+
+.input-group {
+  display: flex;
+  align-content: stretch;
+}
+.input-group > div {
+  flex: 1 0 auto;
+}
+.input-group-text {
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+}
