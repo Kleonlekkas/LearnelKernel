@@ -1,3 +1,14 @@
+function httpRequest(method, url, callback) {
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+   if (this.readyState == 4 && this.status == 200) {
+     callback(this);
+   }
+ 	};
+	xmlhttp.open(method, url);
+	xmlhttp.send();
+}
+
 document.addEventListener("DOMContentLoaded", function(event) {
    // the DOM is ready
 
@@ -35,14 +46,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 			 pwd: function(params) {
 				 // print working directory
-			 	 var xmlhttp = new XMLHttpRequest();
-			   xmlhttp.onreadystatechange = function() {
-				   if (this.readyState == 4 && this.status == 200) {
-				     printTerminal(JSON.parse(this.responseText));
-				   }
-			   };
-			   xmlhttp.open('GET', 'cmds/pwd.php');
-			   xmlhttp.send();
+				 httpRequest('GET', 'cmds/pwd.php', function(self) {
+						printTerminal(JSON.parse(self.responseText));
+				 });
        },
     }
 
