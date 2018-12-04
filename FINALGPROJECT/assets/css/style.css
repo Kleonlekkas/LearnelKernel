@@ -402,10 +402,16 @@ CSS for Exercises ends
 CSS for Profile begins
 */
 
-.chapterHolder {
-    width: 200px;
-    background-color: white;
+chapterHolder {
+    
     display: block;
+    border-style: solid;
+    border-color: deepskyblue;
+    border-radius: 4px;
+    background-color: white;
+    margin: 15px 20px;
+    margin-right: auto;
+    
 }
 
 .chapterHolder:after {
@@ -425,7 +431,32 @@ CSS for Profile begins
     width: 50px;
     height: auto;
     display: inline-block;
-    float: left;
+    float: right;
+    padding: 15px;
+}
+
+.logout{
+    padding-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.out{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    text-decoration: none;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    margin: 10px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+a.out:hover{
+    background-color: steelblue;
 }
 
 /*
