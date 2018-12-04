@@ -387,7 +387,7 @@ CSS for Exercises begins
     width: 98%; 
 }
 
-.errorAnswer{
+.errorAnswer, .wrongAnswer{
     color: red;
     font-weight: bold;
     display: none;
@@ -462,3 +462,69 @@ a.out:hover{
 /*
 CSS for Profile ends
 */
+
+/*
+CSS for Review begins
+*/
+
+.question p{
+    float: left;
+}
+
+input[type=name],
+input[type=date],
+input[type=number]{
+    width: 100%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid skyblue;
+    border-radius: 4px;
+}
+
+input[type=name]:focus,
+input[type=date]:focus,
+input[type=number]:focus{
+    background-color: aliceblue;
+}
+
+.indent{
+    position:relative;
+	float: left;
+    display: inline;
+}
+
+#fieldset label{
+    float: left;
+    text-align: right;
+}
+
+input[type=radio],
+input[type=checkbox]{
+    float: right;
+}
+
+#fieldset{
+    display: block;
+    border: 2px solid skyblue;
+    border-radius: 4px;
+}
+
+/*Media queries for review.php*/
+@media screen and (max-width: 910px) {
+    .question p{
+        float: none;
+    }
+    .indent{
+        float: none;
+    }
+    #fieldset label{
+        float: none;
+    }
+
+    input[type=radio],
+    input[type=checkbox]{
+        float: none;
+    }
+}
+/*End of Review*/
