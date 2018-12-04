@@ -267,3 +267,100 @@ function genNumOrder() {
 /*
 END EXERCISE JS
 */
+
+/*
+JS VALID
+*/
+
+ // validates the form (does not send the form if required entries are missing or invalid)
+    // javascript validator so "required" element is not needed in HTML code
+    function validateForm() {
+        
+        var isvalid = true;
+        
+        // makes entry box for name appear pink with a red border if the name box is left empty
+        if(document.getElementById("name").value == '') {
+            document.getElementById("name").style.borderColor = 'red';
+            document.getElementById("name").style.backgroundColor = 'pink';
+            isvalid = false;
+        }
+    
+        else
+        
+        {
+            document.getElementById("name").style = null;
+        }
+        
+        
+        // makes entry box for date " " if left empty
+        if(document.getElementById("notdate").value == '') {
+            document.getElementById("notdate").style.borderColor = 'red';
+            document.getElementById("notdate").style.backgroundColor = 'pink';
+            isvalid = false;
+        } 
+    
+        else
+        
+        {
+            document.getElementById("notdate").style = null;
+        }
+        
+       
+        
+        
+        // javascript to find and format the current date
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        if(dd<10) {
+            dd = '0'+dd
+        } 
+
+        if(mm<10) {
+            mm = '0'+mm
+        } 
+        
+        // today = current date
+        today = yyyy + '-' + mm + '-' + dd; // this is how the html input method for date formats the date, as tested by the console.log statement below
+        // console.log(document.getElementById("notdate").value);
+        
+        
+        // returns invalid if the date visited is the current date // similar to if date is not entered at all
+        if(document.getElementById("notdate").value == today) {
+            document.getElementById("notdate").style.borderColor = 'red';
+            document.getElementById("notdate").style.backgroundColor = 'pink';
+            
+            isvalid = false;
+        }
+            
+        if(document.getElementById("quiz").value <= 0) {
+            document.getElementById("quiz").style.borderColor = 'red';
+            document.getElementById("quiz").style.backgroundColor = 'pink';
+            
+            isvalid = false;
+        }
+        
+        if(valueCheck < 1) {
+            document.getElementById("indent")
+            isvalid = false;
+            valueCheck = 0;
+        }
+        
+        
+        if(document.getElementsByName("learn").value = null) 
+        {
+            document.getElementById("fieldset1").style.borderColor = 'red';
+            document.getElementById("fieldset1").style.backgroundColor = 'pink';
+            isvalid = false;
+        }
+        
+        if(document.getElementsByName("webpage").value = null) 
+        {
+            document.getElementsByName("webpage").value = "None";
+        }
+        
+            
+        return isvalid;
+    }

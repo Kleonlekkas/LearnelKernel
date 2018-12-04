@@ -13,7 +13,7 @@ session_start();
         
         
         <p>What is your name?</p>
-            <input type="text" name="name" 
+            <input type="name" name="name" 
                    id="name" placeholder="Your Full Name" />
         
             <p>When did you visit?</p>
@@ -25,7 +25,7 @@ session_start();
             <br />
         
         <!-- fieldset with legend and radio input -->
-        <fieldset id="fieldset1">
+        <fieldset id="fieldset">
             <legend>Did you learn something?</legend>
             <div class="indent">
                 <label for="beach1">Yes<input type="radio" id="yes"
@@ -41,7 +41,7 @@ session_start();
         
         <!-- checkbox input -->
             
-            <fieldset>
+            <fieldset id="fieldset">
                 <legend>What pages did you visit?</legend>
                 <div class="indent">
                     <label for="home">The Homepage<input type="checkbox" id="home" name="webpage" value="The Homepage" /></label><br />
@@ -49,6 +49,7 @@ session_start();
                     <label for="story">The Story<input type="checkbox" id="story" name="webpage" value="The Story" /></label><br />
                     <label for="terminal">The Terminal<input type="checkbox" id="terminal" name="webpage" value="The Terminal" /></label><br />
                     <label for="poem">The Alma Mater<input type="checkbox" id="poem" name="webpage" value="The Alma Mater" /></label><br />
+                    <label for="none">The Alma Mater<input type="checkbox" id="none" name="webpage" value="None" /></label>
                 </div>
             </fieldset>
         

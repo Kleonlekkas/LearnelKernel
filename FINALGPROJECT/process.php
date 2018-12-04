@@ -16,8 +16,12 @@
     $name = test_input($_POST['name']);
     $date = test_input($_POST['notdate']);
     $quiz = test_input($_POST['quiz']);
+    if (isset($learn)) {
     $learn = test_input($_POST['learn']);
-    $webpage = test_input($_POST['webpage']);
+    }
+    if (isset($webpage)) {
+        $webpage = test_input($_POST['webpage']);
+    }
     $rating = test_input($_POST['rating']);
     
     // sets and send an email
@@ -26,8 +30,12 @@
     $email_body = "Visitor name $name\n";
     $email_body .= "Date Visited $date\n";
     $email_body .= "Questions attempted $quiz\n";
-    $email_body .= "Did they learn anything $learn\n";
+    if (isset($learn)) {
+        $email_body .= "Did they learn anything $learn\n";
+    }
+    if (isset($webpage)) {
     $email_body .= "Pages Visited $webpage\n";
+    }
     $email_body .= "Overall Rating: $rating\n";
     mail($destination_email, $email_subject, $email_body);
     echo "Data Sent";

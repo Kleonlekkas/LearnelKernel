@@ -439,7 +439,7 @@ include 'assets/inc/header.php';
         
         <p>Now we are going to learn how to navigate into a directory and create a new text file using the <b>“touch”</b> command. All you have to do is type in “cd [directoryname]” (like we discussed earlier) so in our case we are going to type in “cd learnel”. After moving in there we are going to make a text file. To do that all we are going to do is type “touch hello.txt”. This will create our txt file. Congratulations, you done did it friendly learnel kernel learner!</p>
         
-        <img src="assets/img/touch.png" alt="linux command">
+        <img src="assets/img/cd_touch.png" alt="linux command">
         
         <p>Now before we access the file, we need to make sure we have the proper permissions to access the file. All we need to do is type in “chmod ### hello.txt ”. The command, <b>“chmod”</b>, changes the permissions, but the numbers (#) can be whatever you want. Look back to the unit 2 and think about what we need the three numbers to be so WE can read, write, and execute it. We only want others and the group to be able to read and execute it. </p>
         
