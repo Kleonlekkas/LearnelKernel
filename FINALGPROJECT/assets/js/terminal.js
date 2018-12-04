@@ -82,12 +82,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			 xmlhttp.onreadystatechange = function() {
 				 if (this.readyState == 4 && this.status == 200) {
 					 // parse shell line breaks
+					 console.log(this.responseText);
 					 var resp = this.responseText.replace(/(?:\r\n|\r|\n)/g, '<br>');
 					 printTerminal(resp);
 				 }
 			 };
-			 xmlhttp.open("GET", "shell.php?cmd=" + encodeURI(cmd), true);
-			 xmlhttp.send();
+			 console.log("POST shell.php cmd: " + cmd);
+			 xmlhttp.open('POST', 'shell.php', true);
+			 xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			 xmlhttp.send('cmd=' + encodeURI(cmd));
      }
 
      // scroll down terminal
@@ -100,10 +103,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
      printTerminal("Type <b>help</b> for a list of available commands, type <b>clear</b> to clear the screen.");
    }
 
-   function printTerminal(text) {
+   function printTerminal(text, textOnly = false) {
      let div = document.createElement("div");
-     div.innerHTML = text;
-     terminal.appendChild(div);
+		 if (textOnly) {
+				let txtNode = document.createTextNode(text);
+				div.appendChild(txtNode);
+		 } else {
+     	  div.innerHTML = text;
+		 }
+		 terminal.appendChild(div);
    }
 
    // initialize
