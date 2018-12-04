@@ -15,8 +15,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
          printTerminal("Available commands:");
          printTerminal("<strong>help</strong> - List available commands.");
          printTerminal("<strong>clear</strong> - Clear the screen.");
-         printTerminal("<strong>ls</strong> - List files and directories.");
          printTerminal("<strong>params</strong> - Test parsing of parameters, outputs list of parameters arg1,arg2,etc.");
+				 printTerminal("<strong>ls</strong> - List files and directories.");
+				 printTerminal("<strong>pwd</strong> - Print working directory.");
        },
 
        clear: function(params) {
@@ -32,6 +33,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
          printTerminal("Params: " + params);
        },
 
+			 pwd: function(params) {
+				 // print working directory
+			 	 var xmlhttp = new XMLHttpRequest();
+			   xmlhttp.onreadystatechange = function() {
+				   if (this.readyState == 4 && this.status == 200) {
+				     printTerminal(JSON.parse(this.responseText));
+				   }
+			   };
+			   xmlhttp.open('GET', 'cmds/pwd.php');
+			   xmlhttp.send();
+       },
     }
 
    cmdBox.addEventListener("keyup", function(e) {
