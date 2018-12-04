@@ -34,7 +34,8 @@
     } 
 
 ?>
-<img class = "toppic" src = "assets/img/profile.png" alt="Learnel Kernel Profile">
+<body>
+    <img class = "toppic" src = "assets/img/profile.png" alt="Learnel Kernel Profile">
     <div class = "content">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <p>User Name:</p>
