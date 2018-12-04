@@ -9,7 +9,6 @@ session_start();
     <?php  
     echo "<p>Hello and welcome, " . $_SESSION['name'] . " to your profile page!"
     ?>
-    <a href='logout.php'>Click here to log out</a>
         
 <?php
     $path = './';
@@ -91,9 +90,14 @@ session_start();
                     }//end if
                 }//end for each
             ?>
-        </div><!-- end Chapter6 Div-->         
+        </div><!-- end Chapter6 Div--> 
         
     </div><!--END CONTENT-->
+    
+    <div class="logout">
+            <a href='logout.php' class="out">Log Out</a>
+    </div><!--END OF LOG OUT DIV--> 
+    
 </body>
 <?php
 include 'assets/inc/footer.php';
