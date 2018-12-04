@@ -44,7 +44,7 @@ include 'assets/inc/header.php';
 	if ($mysqli) {
 
       //READ IN QUESTIONS FROM DATABASE
-      $sql = 'SELECT unit, question, a1, a2, a3, a4 FROM quizquestions';
+      $sql = 'SELECT unit, question, a1, a2, a3, a4 FROM learnel_quiz';
 	  $res=$mysqli->query($sql);
 	  if($res){
 		while($rowHolder = mysqli_fetch_array($res,MYSQLI_ASSOC)){
@@ -62,11 +62,11 @@ include 'assets/inc/header.php';
         //with each individual value
         makeQuizObjects(
             <?php echo $this_row['unit']; ?>,
-            <?php echo "\"" . addslashes($this_row['question']) . "\""; ?>,
-            <?php echo "\"" . addslashes($this_row['a1']) . "\""; ?>,
-            <?php echo "\"" . addslashes($this_row['a2']) . "\""; ?>,
-            <?php echo "\"" . addslashes($this_row['a3']) . "\""; ?>,
-            <?php echo "\"" . addslashes($this_row['a4']) . "\""; ?>
+            <?php echo $this_row['question']; ?>,
+            <?php echo $this_row['a1']; ?>,
+            <?php echo $this_row['a2']; ?>,
+            <?php echo $this_row['a3']; ?>,
+            <?php echo $this_row['a4']; ?>
         );
     
     </script>
