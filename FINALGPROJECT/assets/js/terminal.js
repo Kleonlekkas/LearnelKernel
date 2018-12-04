@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 					 console.log(this.responseText);
 					 var resp = this.responseText.replace(/(?:\r\n|\r|\n)/g, '<br>');
 					 printTerminal(resp);
+           // scroll down terminal
+           terminal.scrollTop = terminal.scrollHeight;
 				 }
 			 };
 			 console.log("POST shell.php cmd: " + cmd);

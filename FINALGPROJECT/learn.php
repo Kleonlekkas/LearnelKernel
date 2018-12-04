@@ -75,7 +75,6 @@ include 'assets/inc/header.php';
 	}
 ?>
 
-<body onload="makeQuizzes()">
     <img class = "toppic" src = "assets/img/learn.png" alt="Learnel Kernel Profile">
     <img class = "toppic" src = "assets/img/chapter1.png" alt="Learnel Kernel chapter">
     <div class = "content">
@@ -191,7 +190,6 @@ include 'assets/inc/header.php';
     </div>
 
 
-</body>
 <?php
 include 'assets/inc/footer.php';
 ?>

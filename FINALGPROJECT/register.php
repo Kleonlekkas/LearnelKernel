@@ -50,7 +50,6 @@
         <input type="submit" value="Create Account" /><input type="reset" value="Reset" />
         </form>
     </div>
-</body>
 
 <?php
 include 'assets/inc/footer.php';

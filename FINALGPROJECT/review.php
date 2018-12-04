@@ -4,7 +4,6 @@ include 'assets/inc/header.php';
 require "../../../dbConnect.inc";
 session_start();
 ?>
-  <body> 
     <!-- form with inputs dedicated -->
 
     <img class = "toppic" src = "assets/img/review.png" alt="Learnel Kernel review">
@@ -65,7 +64,6 @@ session_start();
         
             <input type="submit" class="button" id="sendB" value="Send" />&nbsp; &nbsp;<input type="Reset" class="button" value="Reset" />
     </form>
-</body> 
 <?php
 include 'assets/inc/footer.php';
 ?>

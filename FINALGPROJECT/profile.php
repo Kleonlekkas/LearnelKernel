@@ -3,7 +3,6 @@ $page = "Profile";
 include 'assets/inc/header.php';
 session_start();
 ?>
-<body>
     <img class = "toppic" src = "assets/img/profile.png" alt="Learnel Kernel Profile">
     <div class = "content">
     <?php  
@@ -98,7 +97,6 @@ session_start();
             <a href='logout.php' class="out">Log Out</a>
     </div><!--END OF LOG OUT DIV--> 
     
-</body>
 <?php
 include 'assets/inc/footer.php';
 ?>

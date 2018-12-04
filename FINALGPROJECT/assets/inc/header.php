@@ -17,6 +17,7 @@
 			}
 		?>
 </head>
+<body <?php if (strcmp($page, "Learn") == 0) { ?>onload="makeQuizzes()" <?php } ?> >
 <header>
     <div class="topnav" id="myTopnav">
         <a class="active" href="index.php"><img class="logo" src="assets/img/penguinLogoColor.png"></a>
