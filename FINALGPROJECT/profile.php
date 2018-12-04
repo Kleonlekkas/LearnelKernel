@@ -34,12 +34,12 @@ session_start();
     
         <div class="chapterHolder">
             <img class="chapImg" src = "assets/img/chapter1.png" alt="Learnel Kernel chapter">
-            <img class="checkImg" src = "assets/img/checkmark.png" alt="Learnel Kernel chapter"
+            <img class="checkImg" src = "assets/img/checkmark.png" alt="Learnel Kernel chapter">
         </div><!-- end Chapter1 Div-->
             
         <div class="chapterHolder">
             <img class="chapImg" src = "assets/img/chapter2.png" alt="Learnel Kernel chapter">
-            <img class="checkImg" src = "assets/img/checkmark.png" alt="Learnel Kernel chapter"
+            <img class="checkImg" src = "assets/img/checkmark.png" alt="Learnel Kernel chapter">
         </div><!-- end Chapter2 Div-->            
         
     </div><!--END CONTENT-->
