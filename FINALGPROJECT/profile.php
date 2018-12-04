@@ -34,13 +34,64 @@ session_start();
     
         <div class="chapterHolder">
             <img class="chapImg" src = "assets/img/chapter1.png" alt="Learnel Kernel chapter">
-            <img class="checkImg" src = "assets/img/checkmark.png" alt="Learnel Kernel chapter">
+            <?php
+                foreach($records as $this_row) {      
+                    if ($this_row['ch1'] == 1) {
+                        echo "<img class='checkImg' src='assets/img/checkmark.png' alt='Learnel Kernel chapter'>";
+                    }//end if
+                }//end for each
+            ?>
         </div><!-- end Chapter1 Div-->
-            
         <div class="chapterHolder">
             <img class="chapImg" src = "assets/img/chapter2.png" alt="Learnel Kernel chapter">
-            <img class="checkImg" src = "assets/img/checkmark.png" alt="Learnel Kernel chapter">
-        </div><!-- end Chapter2 Div-->            
+            <?php
+                foreach($records as $this_row) {      
+                    if ($this_row['ch2'] == 1) {
+                        echo "<img class='checkImg' src='assets/img/checkmark.png' alt='Learnel Kernel chapter'>";
+                    }//end if
+                }//end for each
+            ?>
+        </div><!-- end Chapter2 Div--> 
+        <div class="chapterHolder">
+            <img class="chapImg" src = "assets/img/chapter3.png" alt="Learnel Kernel chapter">
+            <?php
+                foreach($records as $this_row) {      
+                    if ($this_row['ch3'] == 1) {
+                        echo "<img class='checkImg' src='assets/img/checkmark.png' alt='Learnel Kernel chapter'>";
+                    }//end if
+                }//end for each
+            ?>
+        </div><!-- end Chapter3 Div--> 
+        <div class="chapterHolder">
+            <img class="chapImg" src = "assets/img/chapter4.png" alt="Learnel Kernel chapter">
+            <?php
+                foreach($records as $this_row) {      
+                    if ($this_row['ch4'] == 1) {
+                        echo "<img class='checkImg' src='assets/img/checkmark.png' alt='Learnel Kernel chapter'>";
+                    }//end if
+                }//end for each
+            ?>
+        </div><!-- end Chapter4 Div--> 
+        <div class="chapterHolder">
+            <img class="chapImg" src = "assets/img/chapter5.png" alt="Learnel Kernel chapter">
+            <?php
+                foreach($records as $this_row) {      
+                    if ($this_row['ch5'] == 1) {
+                        echo "<img class='checkImg' src='assets/img/checkmark.png' alt='Learnel Kernel chapter'>";
+                    }//end if
+                }//end for each
+            ?>
+        </div><!-- end Chapter5 Div--> 
+        <div class="chapterHolder">
+            <img class="chapImg" src = "assets/img/chapter6.png" alt="Learnel Kernel chapter">
+            <?php
+                foreach($records as $this_row) {      
+                    if ($this_row['ch6'] == 1) {
+                        echo "<img class='checkImg' src='assets/img/checkmark.png' alt='Learnel Kernel chapter'>";
+                    }//end if
+                }//end for each
+            ?>
+        </div><!-- end Chapter6 Div-->         
         
     </div><!--END CONTENT-->
 </body>
